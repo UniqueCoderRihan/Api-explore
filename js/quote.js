@@ -4,6 +4,8 @@ function loadquote(){
     .then(data =>displayData(data))
 }
 
-function displayData(data){
-    console.log(data.quote);
+const displayData = data => {
+    const blockQuote = document.getElementById('quote');
+    blockQuote.innerHTML = data.quote;
 }
+loadquote()
