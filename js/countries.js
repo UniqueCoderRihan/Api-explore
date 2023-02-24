@@ -7,13 +7,13 @@ const displayCountries = countries =>{
     // console.log(countries);
     const allCountries= document.getElementById('all');
     countries.forEach(country => {
-        // console.log(country);
+        // console.log(country.demonyms );
         const officialName = country.name.official;
         const isIndependence = country.independent;
         const capital = country.capital;
         const area = country.area
         const languages = Object.values(country.languages)
-        console.log(languages[0]);
+        const demonyms = country.demonyms[0].eng
         const countryDiv = document.createElement('div')
         countryDiv.classList.add('country')
         countryDiv.innerHTML = `
